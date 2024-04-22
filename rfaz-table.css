@@ -1,0 +1,71 @@
+:root{
+    --header: #8a2be2;
+    --header-font: #ffffff;
+    --border: #cccccc;
+    --body-font: #626262;
+    --stripped-row: #f3f1f1;
+}
+
+table.rfazTable {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 400px;
+    font-family: Roboto;
+    font-size: 0.9em;
+    overflow:hidden;
+    border-collapse:separate;
+    border: solid var(--border) 1px;
+    -webkit-border-radius: 7px;
+       -moz-border-radius: 7px;
+            border-radius: 7px;
+}
+
+table.rfazTable thead tr {
+    height: 40px;
+    align-items: center;
+    background-color: var(--header);
+}
+
+table.rfazTable thead th {
+    padding: 5px;
+}
+
+table.rfazTable td {
+    padding: 5px;
+}
+
+table.rfazTable thead {
+    color: var(--header-font); 
+    font-weight: 600;
+    text-align: left;
+}
+
+table.rfazTable tbody {
+    color: var(--body-font);
+    height: 100%;
+    overflow-y: auto;
+}
+
+table.rfazTable tr {
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    height: 35px;
+}
+
+table.rfazTable>tbody>tr:nth-child(even) {
+    background-color: var(--stripped-row);
+}
+
+table.rfazTable tfoot{
+    border-top: 1.5px solid var(--border);
+    color: var(--body-font);
+}
+
+table.rfazTable tfoot span{
+    font-family: Trirong;
+    color: var(--header);
+    font-weight: 900;
+    margin: 0 5px 0 10px;
+}
